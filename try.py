@@ -35,4 +35,6 @@ inputfield = st.text_input("Text")
 # Update the database and retrieve data when the button is pressed
 if st.button("Launch"):
     updated_data = update_and_get_data(inputfield)
-    st.success(updated_data)
+
+    # Display the full database content
+    st.table(updated_data)
